@@ -239,8 +239,7 @@ footer {
 }
 
 
-
-header {
+.restaurants-header {
     display: flex;
     align-items: center;
     gap: 35px;
@@ -259,6 +258,14 @@ header {
             width: 42%;
             object-fit: cover;
         }
+}
+
+.img-lpdg {
+    width: 100%;
+    height: 300px;
+    background-image: url(public/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
 }
 
 .img-lne {
@@ -292,17 +299,88 @@ header {
         }
 }
 
-#entree {
+.entree {
     & h2 {
         padding-left: 20px;
         font-weight: 400;
     }
     & h2::after {
-        content: "_";
-        background-color: #99e2d0;
-        width: 5rem;
-        height: 0.5rem;
-        bottom: -1.5rem;
-        left: 0;
+        
     }
+}
+
+.plats {
+    padding-top: 30px;
+    & h2 {
+        padding-left: 20px;
+        font-weight: 400;
+    }
+    & h2::after {
+        
+    }
+}
+
+.desserts {
+    padding-top: 30px;
+    & h2 {
+        padding-left: 20px;
+        font-weight: 400;
+    }
+    & h2::after {
+        
+    }
+}
+
+.list-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.list-info {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    width: 95%;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px #d3d3d3;
+}
+
+.list-text {
+    padding: 0 10px;
+    gap: 5%;
+    & h3 {
+        margin: 0;
+        padding-top: 10px;
+        overflow: hidden;
+    }
+        & p {
+            margin: 0;
+            padding-bottom: 10px;
+            overflow: hidden;
+            font-weight: 200;
+        }
+}
+
+.list-price {
+    display: flex;
+    align-items: flex-end;
+    margin: 11px 22px;
+}
+
+.btn-commander {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 55px;
+}
+
+.commander {
+    background: linear-gradient(to bottom, $secondary-color, $primary-color);
+    border: 1px solid ;
+    color: #fff;
+    border-radius: 40px;
+    padding: 20px 55px;
+    font-size: 20px;
 }
