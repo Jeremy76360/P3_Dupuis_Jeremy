@@ -286,4 +286,89 @@ footer {
 .footer_list .shakehand {
   font-size: 12px;
 }
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 35px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  background-color: #fff;
+}
+
+header a {
+  color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 22px;
+  width: 20%;
+}
+
+header img {
+  display: block;
+  width: 42%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.img-lne {
+  width: 100%;
+  height: 300px;
+  background-image: url(public/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.restaurant-list {
+  background-color: #f6f6f6;
+  margin-top: -72px;
+  border-radius: 60px 60px 0 0;
+}
+
+.restaurant-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding-top: 15px;
+  margin-right: 15px;
+  gap: 10px;
+}
+
+.restaurant-name h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.restaurant-name i {
+  font-size: 30px;
+}
+
+#entree h2 {
+  padding-left: 20px;
+  font-weight: 400;
+}
+
+#entree h2::after {
+  content: "_";
+  background-color: #99e2d0;
+  width: 5rem;
+  height: 0.5rem;
+  bottom: -1.5rem;
+  left: 0;
+}
 /*# sourceMappingURL=main.css.map */
