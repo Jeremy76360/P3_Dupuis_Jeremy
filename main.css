@@ -89,6 +89,11 @@ body {
   border-radius: 15px;
   -webkit-box-shadow: 4px 4px 2px #eaeaea;
           box-shadow: 4px 4px 2px #eaeaea;
+  position: relative;
+}
+
+.note i {
+  margin-left: 25px;
 }
 
 .note-purple {
@@ -108,17 +113,18 @@ body {
   border-radius: 15px;
   -webkit-box-shadow: 4px 4px 2px #eaeaea;
           box-shadow: 4px 4px 2px #eaeaea;
+  position: relative;
 }
 
 .note-purple i {
   color: #9356dc;
+  margin-left: 25px;
 }
 
 .note-number {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  float: left;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -132,6 +138,8 @@ body {
   font-size: 14px;
   height: 25px;
   width: 25px;
+  position: absolute;
+  left: -10px;
 }
 
 .restaurants {
@@ -209,6 +217,21 @@ body {
   margin: 0;
 }
 
+.card-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 .5rem;
+  color: black;
+  padding: 1rem;
+}
+
 .card-text {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -221,8 +244,6 @@ body {
       flex-wrap: wrap;
   gap: 5px;
   height: 50px;
-  padding-left: 15px;
-  padding-top: 15px;
 }
 
 .heart-icon i {
@@ -355,36 +376,81 @@ footer {
   background-color: #f6f6f6;
   margin-top: -72px;
   border-radius: 60px 60px 0 0;
+  padding-bottom: 55px;
 }
 
 .restaurant-name {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  padding-top: 15px;
-  margin-right: 15px;
-  gap: 10px;
+  padding: 16px 32px 0 16px;
 }
 
 .restaurant-name h1 {
   font-family: "Shrikhand", cursive;
   font-size: 30px;
-  margin-bottom: 10px;
 }
 
-.restaurant-name i {
+.heart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  position: relative;
+  background: transparent;
+  width: 32px;
+  height: 32px;
+  padding: 0;
   font-size: 30px;
 }
 
+.heart .full {
+  opacity: 0;
+}
+
+.heart .full:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(to bottom, #FF79DA, #9356DC);
+  -webkit-transition: all 2s;
+  transition: all 2s;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  opacity: 1;
+}
+
+.heart i {
+  position: absolute;
+}
+
 .entree h2 {
-  padding-left: 20px;
+  position: relative;
+  padding-bottom: 8px;
   font-weight: 400;
+  margin: 19.2px 20px;
+}
+
+.entree h2::after {
+  content: "";
+  background: #99e2d0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 48px;
+  height: 4px;
 }
 
 .plats {
@@ -392,8 +458,20 @@ footer {
 }
 
 .plats h2 {
-  padding-left: 20px;
+  position: relative;
+  padding-bottom: 8px;
   font-weight: 400;
+  margin: 19.2px 20px;
+}
+
+.plats h2::after {
+  content: "";
+  background: #99e2d0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 48px;
+  height: 4px;
 }
 
 .desserts {
@@ -401,8 +479,20 @@ footer {
 }
 
 .desserts h2 {
-  padding-left: 20px;
+  position: relative;
+  padding-bottom: 8px;
   font-weight: 400;
+  margin: 19.2px 20px;
+}
+
+.desserts h2::after {
+  content: "";
+  background: #99e2d0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 48px;
+  height: 4px;
 }
 
 .list-menu {
@@ -469,7 +559,6 @@ footer {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 40px;
-  margin-bottom: 55px;
 }
 
 .commander {
