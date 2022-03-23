@@ -1,5 +1,141 @@
 /* css reset */
 /* utiliser des variables scss */
+.primary {
+  color: #9356DC;
+}
+
+.secondary {
+  color: #FF79DA;
+}
+
+.tertiary {
+  color: #99E2D0;
+}
+
+.loader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #ffffffa8;
+  z-index: 100000;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation: loader 1s;
+          animation: loader 1s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.loader .loader__logo {
+  font-family: 'Shrikhand', "cursive";
+  font-size: 3rem;
+  -webkit-animation: LogoAnimate 1s;
+          animation: LogoAnimate 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.loader .item--0 {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.loader .item--1 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.loader .item--2 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.loader .item--3 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.loader .item--4 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.loader .item--5 {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.loader .item--6 {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.loader .item--7 {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+
+@-webkit-keyframes LogoAnimate {
+  0% {
+    -webkit-transform: translateY(0) rotate(360deg);
+            transform: translateY(0) rotate(360deg);
+  }
+  25% {
+    -webkit-transform: translateY(1rem);
+            transform: translateY(1rem);
+  }
+  75% {
+    -webkit-transform: translateY(-1rem);
+            transform: translateY(-1rem);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes LogoAnimate {
+  0% {
+    -webkit-transform: translateY(0) rotate(360deg);
+            transform: translateY(0) rotate(360deg);
+  }
+  25% {
+    -webkit-transform: translateY(1rem);
+            transform: translateY(1rem);
+  }
+  75% {
+    -webkit-transform: translateY(-1rem);
+            transform: translateY(-1rem);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -1000;
+  }
+}
+
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -1000;
+  }
+}
+
 title {
   font-family: 'Shrikhand', cursive;
 }
@@ -227,9 +363,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 .5rem;
+  margin: 0 8px;
   color: black;
-  padding: 1rem;
+  padding: 16px;
 }
 
 .card-text {
@@ -244,20 +380,6 @@ body {
       flex-wrap: wrap;
   gap: 5px;
   height: 50px;
-}
-
-.heart-icon i {
-  font-size: 25px;
-  padding: 7px;
-  margin-left: 150px;
-}
-
-.heart-icon i .heart-color:hover {
-  opacity: 1;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(to bottom, #FF79DA, #9356DC);
-  -webkit-transition: all .25s;
-  transition: all .25s;
 }
 
 footer {
@@ -414,6 +536,7 @@ footer {
   height: 32px;
   padding: 0;
   font-size: 30px;
+  margin-bottom: 15px;
 }
 
 .heart .full {
@@ -521,6 +644,35 @@ footer {
   border-radius: 15px;
   -webkit-box-shadow: 2px 2px 2px #d3d3d3;
           box-shadow: 2px 2px 2px #d3d3d3;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.list-info:hover .list-check {
+  -webkit-transform: translateX(-68px);
+          transform: translateX(-68px);
+  -webkit-transition: -webkit-transform 0.7s;
+  transition: -webkit-transform 0.7s;
+  transition: transform 0.7s;
+  transition: transform 0.7s, -webkit-transform 0.7s;
+}
+
+.list-info:hover .list-checked-circle {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-transition: -webkit-transform 0.7s;
+  transition: -webkit-transform 0.7s;
+  transition: transform 0.7s;
+  transition: transform 0.7s, -webkit-transform 0.7s;
+}
+
+.list-info:hover .list-price {
+  -webkit-transform: translateX(-200%);
+          transform: translateX(-200%);
+  -webkit-transition: -webkit-transform 0.7s;
+  transition: -webkit-transform 0.7s;
+  transition: transform 0.7s;
+  transition: transform 0.7s, -webkit-transform 0.7s;
 }
 
 .list-text {
@@ -551,6 +703,48 @@ footer {
   margin: 11px 22px;
 }
 
+.list-check {
+  height: 63px;
+  width: 60px;
+  background: #99E2D0;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0 18px 18px 0;
+  position: absolute;
+  right: -60px;
+  -webkit-transition: -webkit-transform 0.7s;
+  transition: -webkit-transform 0.7s;
+  transition: transform 0.7s;
+  transition: transform 0.7s, -webkit-transform 0.7s;
+}
+
+.list-check-circle {
+  background: #ffffff;
+  height: 22px;
+  width: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50px;
+  color: #99E2D0;
+  font-size: 14px;
+}
+
 .btn-commander {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -569,5 +763,98 @@ footer {
   border-radius: 40px;
   padding: 20px 55px;
   font-size: 20px;
+}
+
+.animation-1, .animation-2, .animation-3, .animation-4, .animation-5, .animation-6, .animation-7, .animation-8, .animation-9, .animation-10 {
+  -webkit-animation-name: animateblock;
+  animation-name: animateblock;
+}
+
+.animation-1 {
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+.animation-2 {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.animation-3 {
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+}
+
+.animation-4 {
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
+.animation-5 {
+  -webkit-animation-duration: 3.5s;
+          animation-duration: 3.5s;
+}
+
+.animation-6 {
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+}
+
+.animation-7 {
+  -webkit-animation-duration: 4.5s;
+          animation-duration: 4.5s;
+}
+
+.animation-8 {
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+}
+
+.animation-9 {
+  -webkit-animation-duration: 5.5s;
+          animation-duration: 5.5s;
+}
+
+.animation-10 {
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+}
+
+@-webkit-keyframes animateblock {
+  0% {
+    bottom: -50px;
+    opacity: 0;
+  }
+  50% {
+    bottom: -50px;
+    opacity: 0;
+  }
+  75% {
+    bottom: 0px;
+    opacity: 0.5;
+  }
+  100% {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animateblock {
+  0% {
+    bottom: -50px;
+    opacity: 0;
+  }
+  50% {
+    bottom: -50px;
+    opacity: 0;
+  }
+  75% {
+    bottom: 0px;
+    opacity: 0.5;
+  }
+  100% {
+    bottom: 0;
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=main.css.map */
