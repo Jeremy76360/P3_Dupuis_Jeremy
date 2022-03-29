@@ -1,15 +1,15 @@
 /* css reset */
 /* utiliser des variables scss */
 .primary {
-  color: #9356DC;
+  color: #9356dc;
 }
 
 .secondary {
-  color: #FF79DA;
+  color: #ff79da;
 }
 
 .tertiary {
-  color: #99E2D0;
+  color: #99e2d0;
 }
 
 .loader {
@@ -35,8 +35,8 @@
           animation-fill-mode: both;
 }
 
-.loader .loader__logo {
-  font-family: 'Shrikhand', "cursive";
+.loader .loader-logo {
+  font-family: "Shrikhand", "cursive";
   font-size: 3rem;
   -webkit-animation: LogoAnimate 1s;
           animation: LogoAnimate 1s;
@@ -137,11 +137,11 @@
 }
 
 title {
-  font-family: 'Shrikhand', cursive;
+  font-family: "Shrikhand", cursive;
 }
 
 h1, h2, h3, h4, p, span {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 h1 {
@@ -150,6 +150,7 @@ h1 {
 
 body {
   margin: 0;
+  overflow-x: hidden;
 }
 
 #header-logo img {
@@ -172,8 +173,8 @@ body {
 }
 
 .body-intro button {
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(to bottom, #FF79DA, #9356DC);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(to bottom, #ff79da, #9356dc);
   border: 1px solid;
   color: #fff;
   border-radius: 20px;
@@ -208,7 +209,7 @@ body {
           justify-content: center;
 }
 
-.note {
+.note, .note-purple {
   background-color: #f6f6f6;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -228,28 +229,8 @@ body {
   position: relative;
 }
 
-.note i {
+.note i, .note-purple i {
   margin-left: 25px;
-}
-
-.note-purple {
-  background-color: #f5edff;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  width: 90%;
-  gap: 19px;
-  border-radius: 15px;
-  -webkit-box-shadow: 4px 4px 2px #eaeaea;
-          box-shadow: 4px 4px 2px #eaeaea;
-  position: relative;
 }
 
 .note-purple i {
@@ -287,7 +268,7 @@ body {
   border-radius: 15px;
   width: 100%;
   margin-top: 30px;
-  margin-bottom: 65px;
+  padding-bottom: 65px;
 }
 
 .restaurants h2 {
@@ -316,6 +297,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   text-decoration: none;
+  position: relative;
   color: #000;
   height: 240px;
   width: 90%;
@@ -326,7 +308,6 @@ body {
 }
 
 .rest-list img {
-  position: relative;
   -o-object-fit: cover;
      object-fit: cover;
   height: 70%;
@@ -339,10 +320,10 @@ body {
   color: #1a8a68;
   position: absolute;
   text-align: center;
-  margin-top: 13px;
-  margin-left: 287px;
   padding: 5px 0;
   width: 70px;
+  right: 32px;
+  top: 16px;
 }
 
 .rest-list h4 {
@@ -399,7 +380,7 @@ footer {
 
 .footer_list h2 {
   color: #fff;
-  font-family: Shrikhand, 'cursive';
+  font-family: Shrikhand, "cursive";
   margin-top: 20px;
   margin-bottom: 10px;
   margin-left: 20px;
@@ -437,10 +418,13 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 35px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  background-color: #fff;
   margin-top: 20px;
   margin-bottom: 10px;
-  background-color: #fff;
 }
 
 .restaurants-header a {
@@ -451,15 +435,19 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
   font-size: 22px;
-  width: 20%;
+  right: 22%;
+  bottom: 15px;
+}
+
+.restaurants-header span {
+  position: absolute;
 }
 
 .restaurants-header img {
   display: block;
-  width: 42%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  width: 35%;
 }
 
 .img-lpdg {
@@ -505,9 +493,8 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -544,8 +531,8 @@ footer {
 }
 
 .heart .full:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(to bottom, #FF79DA, #9356DC);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(to bottom, #ff79da, #9356dc);
   -webkit-transition: all 2s;
   transition: all 2s;
   -webkit-background-clip: text;
@@ -559,14 +546,14 @@ footer {
   position: absolute;
 }
 
-.entree h2 {
+.entree h2, .plats h2, .desserts h2 {
   position: relative;
   padding-bottom: 8px;
   font-weight: 400;
   margin: 19.2px 20px;
 }
 
-.entree h2::after {
+.entree h2::after, .plats h2::after, .desserts h2::after {
   content: "";
   background: #99e2d0;
   position: absolute;
@@ -576,46 +563,8 @@ footer {
   height: 4px;
 }
 
-.plats {
+.plats .desserts {
   padding-top: 30px;
-}
-
-.plats h2 {
-  position: relative;
-  padding-bottom: 8px;
-  font-weight: 400;
-  margin: 19.2px 20px;
-}
-
-.plats h2::after {
-  content: "";
-  background: #99e2d0;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 48px;
-  height: 4px;
-}
-
-.desserts {
-  padding-top: 30px;
-}
-
-.desserts h2 {
-  position: relative;
-  padding-bottom: 8px;
-  font-weight: 400;
-  margin: 19.2px 20px;
-}
-
-.desserts h2::after {
-  content: "";
-  background: #99e2d0;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 48px;
-  height: 4px;
 }
 
 .list-menu {
@@ -646,11 +595,12 @@ footer {
           box-shadow: 2px 2px 2px #d3d3d3;
   cursor: pointer;
   overflow: hidden;
+  position: relative;
 }
 
 .list-info:hover .list-check {
-  -webkit-transform: translateX(-68px);
-          transform: translateX(-68px);
+  -webkit-transform: translateX(-70px);
+          transform: translateX(-70px);
   -webkit-transition: -webkit-transform 0.7s;
   transition: -webkit-transform 0.7s;
   transition: transform 0.7s;
@@ -704,9 +654,7 @@ footer {
 }
 
 .list-check {
-  height: 63px;
-  width: 60px;
-  background: #99E2D0;
+  background: #99e2d0;
   -ms-flex-item-align: end;
       align-self: flex-end;
   display: -webkit-box;
@@ -718,19 +666,20 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-radius: 0 18px 18px 0;
   position: absolute;
-  right: -60px;
+  right: -72px;
   -webkit-transition: -webkit-transform 0.7s;
   transition: -webkit-transform 0.7s;
   transition: transform 0.7s;
   transition: transform 0.7s, -webkit-transform 0.7s;
+  height: 63px;
+  width: 60px;
+  border-radius: 0 18px 18px 0;
 }
 
 .list-check-circle {
+  color: #99e2d0;
   background: #ffffff;
-  height: 22px;
-  width: 22px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -741,8 +690,9 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 50px;
-  color: #99E2D0;
   font-size: 14px;
+  height: 22px;
+  width: 22px;
 }
 
 .btn-commander {
@@ -756,8 +706,8 @@ footer {
 }
 
 .commander {
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(to bottom, #FF79DA, #9356DC);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(to bottom, #ff79da, #9356dc);
   border: 1px solid;
   color: #fff;
   border-radius: 40px;
@@ -767,7 +717,7 @@ footer {
 
 .animation-1, .animation-2, .animation-3, .animation-4, .animation-5, .animation-6, .animation-7, .animation-8, .animation-9, .animation-10 {
   -webkit-animation-name: animateblock;
-  animation-name: animateblock;
+          animation-name: animateblock;
 }
 
 .animation-1 {
@@ -855,6 +805,91 @@ footer {
   100% {
     bottom: 0;
     opacity: 1;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .restaurant-name {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .restaurant-name h1 {
+    font-size: 25px;
+  }
+  .restaurant-name .heart {
+    left: 20%;
+    top: 8px;
+  }
+  .menu {
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .entree, .plats, .desserts {
+    width: 415px;
+  }
+  .plats, .desserts {
+    padding-top: 0;
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  .rest-list a {
+    width: 45%;
+  }
+  #header-logo img {
+    width: 30%;
+  }
+  .body-intro button {
+    font-size: 16px;
+    border-radius: 30px;
+  }
+  .working-note {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 30px;
+    margin: 0 25px;
+  }
+  .note {
+    width: 45%;
+  }
+  .note-purple {
+    width: 45%;
+  }
+  .restaurant-name h1 {
+    font-size: 50px;
+  }
+  .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 100%;
+  }
+  .plats, .desserts {
+    padding-top: 0;
+  }
+  .list-check {
+    right: -73px;
   }
 }
 /*# sourceMappingURL=main.css.map */
