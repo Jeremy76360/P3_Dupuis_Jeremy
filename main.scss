@@ -1,7 +1,4 @@
 
-/* css reset */
-/* utiliser des variables scss */
-
 $primary-color: #9356dc;
 $secondary-color: #ff79da;
 $tertiary-color: #99e2d0;
@@ -151,6 +148,7 @@ body {
 }
 
 .note-purple {
+  background-color: #f5edff;
   & i {
     color: #9356dc;
     margin-left: 25px;
@@ -280,6 +278,8 @@ footer {
     font-size: 12px;
   }
 }
+
+/* Page des restaurants */
 
 .restaurants-header {
   display: flex;
@@ -562,6 +562,8 @@ footer {
     opacity: 1;
   }
 }
+
+/* Responsive */
 
 @media screen and (min-width: 500px) {
 
