@@ -567,6 +567,10 @@ footer {
 
 @media screen and (min-width: 500px) {
 
+  .note {
+    width: 450px;
+  }
+
   .restaurant-name {
     justify-content: center;
     & h1 {
