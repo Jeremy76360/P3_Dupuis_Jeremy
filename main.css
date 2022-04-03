@@ -813,7 +813,7 @@ footer {
 
 /* Responsive */
 @media screen and (min-width: 500px) {
-  .note {
+  .note, .note-purple {
     width: 450px;
   }
   .restaurant-name {
